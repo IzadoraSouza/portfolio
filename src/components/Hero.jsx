@@ -1,21 +1,31 @@
+import { useEffect, useRef } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 
 function Hero() {
   const { t } = useLanguage()
+  const ref = useRef()
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const timer = setTimeout(() => el.classList.add('visible'), 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <section id="inicio" className="hero">
-      <div className="interface hero-inner">
+      <div className="interface hero-inner" ref={ref}>
         <div className="hero-text">
-          <span className="hero-label">{t.hero.greeting}</span>
-          <h1>Luiz Henrique</h1>
-          <h2 className="hero-role">{t.hero.role} <span>{t.hero.roleHighlight}</span></h2>
-          <p>{t.hero.description}</p>
+          <div className="hero-eyebrow">{t.hero.greeting}</div>
+          <h1 className="hero-name">Luiz Henrique</h1>
+          <p className="hero-role">
+            {t.hero.role} <span>{t.hero.roleHighlight}</span>
+          </p>
+          <p className="hero-desc">{t.hero.description}</p>
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => scrollTo('contato')}>
               {t.hero.btnContact}
@@ -26,9 +36,10 @@ function Hero() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/img/computer.png" alt="Computador" />
+          <img src="/img/computer.png" alt="Computer" />
         </div>
       </div>
+      <div className="hero-scroll">scroll</div>
     </section>
   )
 }

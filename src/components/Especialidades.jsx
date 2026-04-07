@@ -1,16 +1,23 @@
 import { useLanguage } from '../context/LanguageContext'
+import { useReveal } from '../hooks/useReveal'
 
 function Especialidades() {
   const { t } = useLanguage()
   const s = t.skills
+  const titleRef = useReveal()
+  const boxRef   = useReveal(0.1)
 
   return (
     <section id="especialidades" className="especialidades">
       <div className="interface">
-        <h2 className="section-title" style={{ textAlign: 'center' }}>
+        <h2
+          ref={titleRef}
+          className="section-title reveal"
+          style={{ textAlign: 'center' }}
+        >
           {s.title.toUpperCase()} <span>{s.titleHighlight.toUpperCase()}</span>
         </h2>
-        <div className="especialidades-flex">
+        <div ref={boxRef} className="especialidades-flex reveal">
           <div className="especialidades-box">
             <h3>{s.fullstack.title}</h3>
             <p>{s.fullstack.desc}</p>

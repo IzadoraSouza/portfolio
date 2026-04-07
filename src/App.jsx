@@ -6,10 +6,12 @@ import Sobre from './components/Sobre'
 import Portfolio from './components/Portfolio'
 import Contato from './components/Contato'
 import Footer from './components/Footer'
+import StarField from './components/StarField'
 
 function App() {
   return (
     <LanguageProvider>
+      <StarField />
       <Header />
       <main>
         <Hero />

@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import { useReveal } from '../hooks/useReveal'
 
 function Contato() {
   const { t } = useLanguage()
   const c = t.contact
   const [form, setForm] = useState({ nome: '', email: '', mensagem: '' })
+  const headerRef = useReveal()
+  const contentRef = useReveal(0.1)
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -18,11 +21,11 @@ function Contato() {
   return (
     <section id="contato" className="contato">
       <div className="interface">
-        <div className="section-header">
+        <div ref={headerRef} className="section-header reveal">
           <h2 className="section-title">{c.title} <span>{c.titleHighlight}</span></h2>
           <p className="section-subtitle">{c.subtitle}</p>
         </div>
-        <div className="contato-inner">
+        <div ref={contentRef} className="contato-inner reveal">
           <div className="contato-info">
             <div className="contato-info-item">
               <i className="bi bi-envelope"></i>
@@ -35,14 +38,18 @@ function Contato() {
               <i className="bi bi-github"></i>
               <div>
                 <span>{c.githubLabel}</span>
-                <a href="https://github.com/Luiz-Rodrigues-tech" target="_blank" rel="noreferrer">github.com/Luiz-Rodrigues-tech</a>
+                <a href="https://github.com/Luiz-Rodrigues-tech" target="_blank" rel="noreferrer">
+                  github.com/Luiz-Rodrigues-tech
+                </a>
               </div>
             </div>
             <div className="contato-info-item">
               <i className="bi bi-linkedin"></i>
               <div>
                 <span>{c.linkedinLabel}</span>
-                <a href="https://www.linkedin.com/in/luiz-rodrigues-tech" target="_blank" rel="noreferrer">linkedin.com/in/luiz-rodrigues-tech</a>
+                <a href="https://www.linkedin.com/in/luiz-rodrigues-tech" target="_blank" rel="noreferrer">
+                  linkedin.com/in/luiz-rodrigues-tech
+                </a>
               </div>
             </div>
           </div>
