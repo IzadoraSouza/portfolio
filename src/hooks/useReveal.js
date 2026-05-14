@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export function useReveal(threshold = 0.15, repeat = false) {
+export function useReveal(threshold = 0.15) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -11,17 +11,15 @@ export function useReveal(threshold = 0.15, repeat = false) {
       ([entry]) => {
         if (entry.isIntersecting) {
           el.classList.add('visible')
-          if (!repeat) observer.disconnect()
-        } else if (repeat) {
-          el.classList.remove('visible')
+          observer.disconnect()
         }
       },
-      { threshold, rootMargin: '0px 0px -40px 0px' }
+      { threshold }
     )
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [threshold, repeat])
+  }, [threshold])
 
   return ref
 }

@@ -19,6 +19,7 @@ function TerminalLine({ tokens, visible, isCurrentLine, charIndex }) {
 
   let content
   if (isCurrentLine) {
+    // Renderiza só até charIndex caracteres, token por token
     const parts = []
     let charsLeft = charIndex
     for (let i = 0; i < tokens.length; i++) {
@@ -53,6 +54,7 @@ export default function Sobre() {
   const [doneLines, setDoneLines] = useState([])
   const [triggered, setTriggered] = useState(false)
 
+  // IntersectionObserver
   useEffect(() => {
     if (triggered) return
     const obs = new IntersectionObserver(
@@ -63,6 +65,7 @@ export default function Sobre() {
     return () => obs.disconnect()
   }, [triggered])
 
+  // Typewriter por linha
   useEffect(() => {
     if (!triggered) return
     setTimeout(() => setLineIdx(0), 400)
@@ -98,7 +101,9 @@ export default function Sobre() {
           <h2 className="section-title">{a.title} <span>{a.titleHighlight}</span></h2>
         </div>
 
+        {/* Terminal */}
         <div className={`terminal-card ${triggered ? 'terminal-card--in' : ''}`}>
+          {/* Barra do terminal */}
           <div className="terminal-bar">
             <span className="term-dot term-dot--red" />
             <span className="term-dot term-dot--yellow" />
@@ -106,6 +111,7 @@ export default function Sobre() {
             <span className="terminal-title">developer.js</span>
           </div>
 
+          {/* Código */}
           <div className="terminal-body">
             {lines.map((line, i) => (
               <TerminalLine
@@ -119,6 +125,7 @@ export default function Sobre() {
             {lineIdx < 0 && <span className="term-cursor" />}
           </div>
         </div>
+
       </div>
     </section>
   )

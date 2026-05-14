@@ -2,10 +2,9 @@ const translations = {
   pt: {
     nav: {
       inicio: 'Início',
+      especialidades: 'Atuação',
       sobre: 'Sobre',
       projetos: 'Projetos',
-      especialidades: 'Serviços',
-      curriculo: 'Currículo',
       contato: 'Contato',
     },
     hero: {
@@ -18,34 +17,19 @@ const translations = {
       btnProjects: 'Ver projetos',
     },
     skills: {
-      title: 'Meus',
-      titleHighlight: 'Serviços',
+      title: 'O que',
+      titleHighlight: 'eu faço',
       fullstack: {
         title: 'Front-End',
-        tags: ['React', 'JavaScript', 'HTML', 'CSS'],
-        items: [
-          'Interfaces responsivas com HTML, CSS, JavaScript e React',
-          'Foco em performance, usabilidade e fidelidade ao design',
-          'Componentização com React e gerenciamento de estado',
-        ],
+        desc: 'Interfaces responsivas com HTML, CSS, JavaScript e React. Foco em performance, usabilidade e fidelidade ao design.',
       },
       backend: {
         title: 'Back-end',
-        tags: ['PHP', 'Java', 'Python', 'C', 'C#'],
-        items: [
-          'APIs e integrações com PHP, Java, Python, C e C#',
-          'Lógica de negócio estruturada, autenticação e manipulação de dados',
-          'Modelagem de bancos de dados relacionais e não relacionais',
-        ],
+        desc: 'APIs e integrações com PHP, Java, Python, C e C#. Lógica de negócio estruturada, autenticação e manipulação de dados.',
       },
       tools: {
         title: 'Ferramentas',
-        tags: ['Git', 'GitHub', 'Figma', 'VS Code', 'Postman', 'Trello'],
-        items: [
-          'Versionamento de código com Git e GitHub',
-          'Prototipação de interfaces com Figma',
-          'Testes de API com Postman e organização com Trello',
-        ],
+        desc: 'Git, GitHub, VS Code, Postman, Figma e Trello. Versionamento, testes de API, prototipação e organização de projetos.',
       },
     },
     about: {
@@ -101,10 +85,9 @@ const translations = {
   en: {
     nav: {
       inicio: 'Home',
+      especialidades: 'What I Do',
       sobre: 'About',
       projetos: 'Projects',
-      especialidades: 'Services',
-      curriculo: 'Resume',
       contato: 'Contact',
     },
     hero: {
@@ -117,34 +100,19 @@ const translations = {
       btnProjects: 'See projects',
     },
     skills: {
-      title: 'My',
-      titleHighlight: 'Services',
+      title: 'What',
+      titleHighlight: 'I Do',
       fullstack: {
         title: 'Front-End',
-        tags: ['React', 'JavaScript', 'HTML', 'CSS'],
-        items: [
-          'Responsive interfaces with HTML, CSS, JavaScript and React',
-          'Focus on performance, usability and design fidelity',
-          'Component-based development with React and state management',
-        ],
+        desc: 'Responsive interfaces with HTML, CSS, JavaScript and React. Focus on performance, usability and design fidelity.',
       },
       backend: {
         title: 'Back-end',
-        tags: ['PHP', 'Java', 'Python', 'C', 'C#'],
-        items: [
-          'APIs and integrations with PHP, Java, Python, C and C#',
-          'Structured business logic, authentication and data handling',
-          'Relational and non-relational database modeling',
-        ],
+        desc: 'APIs and integrations with PHP, Java, Python, C and C#. Structured business logic, authentication and data handling.',
       },
       tools: {
         title: 'Tools',
-        tags: ['Git', 'GitHub', 'Figma', 'VS Code', 'Postman', 'Trello'],
-        items: [
-          'Version control with Git and GitHub',
-          'Interface prototyping with Figma',
-          'API testing with Postman and project organization with Trello',
-        ],
+        desc: 'Git, GitHub, VS Code, Postman, Figma and Trello. Version control, API testing, prototyping and project organization.',
       },
     },
     about: {
@@ -200,10 +168,9 @@ const translations = {
   es: {
     nav: {
       inicio: 'Inicio',
+      especialidades: 'Lo que hago',
       sobre: 'Sobre mí',
       projetos: 'Proyectos',
-      especialidades: 'Servicios',
-      curriculo: 'Currículum',
       contato: 'Contacto',
     },
     hero: {
@@ -216,34 +183,19 @@ const translations = {
       btnProjects: 'Ver proyectos',
     },
     skills: {
-      title: 'Mis',
-      titleHighlight: 'Servicios',
+      title: 'Lo que',
+      titleHighlight: 'hago',
       fullstack: {
         title: 'Front-End',
-        tags: ['React', 'JavaScript', 'HTML', 'CSS'],
-        items: [
-          'Interfaces responsivas con HTML, CSS, JavaScript y React',
-          'Foco en rendimiento, usabilidad y fidelidad al diseño',
-          'Desarrollo por componentes con React y gestión de estado',
-        ],
+        desc: 'Interfaces responsivas con HTML, CSS, JavaScript y React. Foco en rendimiento, usabilidad y fidelidad al diseño.',
       },
       backend: {
         title: 'Back-end',
-        tags: ['PHP', 'Java', 'Python', 'C', 'C#'],
-        items: [
-          'APIs e integraciones con PHP, Java, Python, C y C#',
-          'Lógica de negocio estructurada, autenticación y manejo de datos',
-          'Modelado de bases de datos relacionales y no relacionales',
-        ],
+        desc: 'APIs e integraciones con PHP, Java, Python, C y C#. Lógica de negocio estructurada, autenticación y manejo de datos.',
       },
       tools: {
         title: 'Herramientas',
-        tags: ['Git', 'GitHub', 'Figma', 'VS Code', 'Postman', 'Trello'],
-        items: [
-          'Control de versiones con Git y GitHub',
-          'Prototipado de interfaces con Figma',
-          'Pruebas de API con Postman y organización con Trello',
-        ],
+        desc: 'Git, GitHub, VS Code, Postman, Figma y Trello. Control de versiones, pruebas de API, prototipado y organización de proyectos.',
       },
     },
     about: {
